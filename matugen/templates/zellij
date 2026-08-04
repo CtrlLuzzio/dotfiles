@@ -1,0 +1,15 @@
+themes {
+    material-you {
+        fg "{{colors.on_surface.default.hex}}"
+        bg "{{colors.surface.default.hex}}"
+        black "{{colors.surface_variant.default.hex}}"
+        red "{{colors.error.default.hex}}"
+        green "{{colors.secondary.default.hex}}"
+        yellow "{{colors.inverse_primary.default.hex}}"
+        blue "{{colors.primary.default.hex}}"
+        magenta "{{colors.tertiary.default.hex}}"
+        cyan "{{colors.primary_container.default.hex}}"
+        white "{{colors.on_surface_variant.default.hex}}"
+        orange "{{colors.secondary_container.default.hex}}"
+    }
+}

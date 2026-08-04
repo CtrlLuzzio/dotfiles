@@ -1,0 +1,33 @@
+[config]
+[templates.foot]
+input_path = "~/.config/matugen/templates/foot"
+output_path = "~/.config/foot/themes/material-you.ini"
+post_hook = "pkill -USR1 foot"
+
+[templates.hypr]
+input_path = "~/.config/matugen/templates/hypr"
+output_path = "~/.config/hypr/modules/themes/material-you.lua"
+post_hook = "hyprctl reload"
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar"
+output_path = "~/.config/waybar/themes/material-you.css"
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.swaync]
+input_path = "~/.config/matugen/templates/swaync"
+output_path = "~/.config/swaync/themes/material-you.css"
+post_hook = "swaync-client -rs"
+
+[templates.rofi]
+input_path = "~/.config/matugen/templates/rofi"
+output_path = "~/.config/rofi/themes/material-you.rasi"
+
+[templates.mango]
+input_path = "~/.config/matugen/templates/mango"
+output_path = "~/.config/mango/modules/themes/material-you.conf"
+post_hook = "mangoctl reload"
+
+[templates.zellij]
+input_path = "~/.config/matugen/templates/zellij"
+output_path = "~/.config/zellij/themes/material-you.kdl"

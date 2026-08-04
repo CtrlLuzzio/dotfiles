@@ -1,0 +1,7 @@
+@import "notification.css";
+@import "notification_center.css";
+
+* {
+  font-family: "JetBrains Mono Nerd Font Propo SemiBold", monospace;
+  border-radius: 10px;
+}

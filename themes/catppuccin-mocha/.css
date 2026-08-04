@@ -1,0 +1,29 @@
+:root {
+  --bg-darker: #11111b; /* Crust */
+  --bg-dark: #181825; /* Mantle */
+  --bg0: #1e1e2e; /* Base */
+  --bg1: #313244; /* Surface 0 */
+  --bg2: #45475a; /* Surface 1 */
+  --bg3: #585b70; /* Surface 2 */
+  --bg4: #6c7086; /* Overlay 0 */
+  --grey0: #7f849c; /* Overlay 1 */
+  --grey1: #9399b2; /* Overlay 2 */
+  --fg-disabled: #a6adc8; /* Subtext 0 */
+  --fg: #cdd6f4; /* Text */
+  --purple: #cba6f7; /* Mauve */
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --green: #a6e3a1;
+  --blue: #89b4fa;
+  --orange: #fab387; /* Peach */
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --yellow: #f9e2af;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --lavender: #b4befe;
+  --subtext1: #bac2de;
+  --accent: var(--purple)
+}

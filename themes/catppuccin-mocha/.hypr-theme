@@ -1,0 +1,6 @@
+local colors = {
+    active = "rgba(cba6f7ee)",
+    inactive = "rgba(1e1e2eaa)",
+}
+
+return colors

@@ -1,0 +1,9 @@
+{
+  "include": ["./shared.jsonc"],
+  "modules-left": ["ext/workspaces"],
+
+  "ext/workspaces": {
+    "format": "{}",
+    "on-click": "activate"
+  },
+}

@@ -1,0 +1,10 @@
+-- https://wiki.hypr.land/Configuring/Start/
+require("modules.monitors")
+require("modules.autostart")
+require("modules.input")
+require("modules.env")
+require("modules.look")
+require("modules.layouts")
+require("modules.misc")
+require("modules.binds")
+require("modules.rules")

@@ -1,0 +1,67 @@
+@import "colors.css";
+
+.control-center {
+  background: var(--bg0);
+  border: 2px solid var(--purple);
+  padding: 4px;
+}
+
+.widget-title {
+  color: var(--fg);
+  background: var(--bg-dark);
+  font-size: 1.5rem;
+}
+
+.widget-title>button {
+  font-size: 1rem;
+  color: var(--fg);
+  background: var(--bg1);
+  box-shadow: none;
+}
+
+.widget-title>button:hover {
+  background: var(--red);
+  color: var(--bg0);
+}
+
+.widget-dnd {
+  background: var(--bg-dark);
+  font-size: large;
+  color: var(--fg);
+}
+
+.widget-dnd>switch {
+  background: var(--blue);
+}
+
+.widget-dnd>switch:checked {
+  background: var(--red);
+}
+
+.widget-mpris {
+  color: var(--fg);
+  background: var(--bg-dark);
+  box-shadow: none;
+}
+
+.widget-mpris>box>button,
+.widget-mpris-player,
+.widget-mpris-album-art {
+  box-shadow: none;
+}
+
+picture.mpris-background {
+  opacity: 0;
+}
+
+.widget-title,
+.widget-dnd,
+.widget-mpris,
+.control-center .notification {
+  margin: 4px;
+}
+
+.widget-notifications {
+  margin: 0;
+  padding: 0;
+}

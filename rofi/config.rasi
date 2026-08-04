@@ -1,0 +1,192 @@
+@import "colors"
+
+configuration {
+    modi: "drun,filebrowser,calc,emoji:rofimoji";
+    font: "JetBrains Mono NF 12";
+    show-icons: true;
+    drun-display-format: "{name}";
+    calc {
+    	hint-result: "Result: ";
+    	hint-welcome: "Calculator";
+    }
+}
+
+* {
+    background:                  var(bg0);
+    lightbg:                     var(background);
+    foreground:                  var(fg);
+    lightfg:                     var(foreground);
+    selected-active-foreground:  var(background);
+    separatorcolor:              var(foreground);
+    urgent-foreground:           var(red);
+    alternate-urgent-background: var(lightbg);
+    background-color:            transparent;
+    border-color:                var(foreground);
+    normal-background:           var(background);
+    selected-urgent-background:  var(red);
+    alternate-active-background: var(lightbg);
+    spacing:                     2;
+    alternate-normal-foreground: var(foreground);
+    urgent-background:           var(background);
+    selected-normal-foreground:  var(lightbg);
+    active-foreground:           var(blue);
+    selected-active-background:  var(blue);
+    active-background:           var(background);
+    selected-normal-background:  var(lightfg);
+    alternate-normal-background: var(lightbg);
+    selected-urgent-foreground:  var(background);
+    normal-foreground:           var(foreground);
+    alternate-urgent-foreground: var(red);
+    alternate-active-foreground: var(blue);
+}
+
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    cursor: pointer;
+    background-color: var(background);
+    enabled: true;
+    border: 2px;
+    border-color: var(accent);
+    border-radius: 10px;
+}
+
+mainbox {
+    enabled: true;
+    background-color: transparent;
+    orientation: vertical;
+    children: [ "listbox" ];
+    padding: 10px;
+}
+
+listbox {
+    background-color: transparent;
+    orientation: vertical;
+    children: [ "mode-switcher", "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    enabled: true;
+    background-color: transparent;
+    text-color: var(foreground);
+    children: [ "entry", "num-filtered-rows", "textbox-num-sep", "num-rows" ];
+    padding: 10px;
+}
+
+entry {
+    enabled: true;
+    placeholder: "...";
+    cursor: pointer;
+    placeholder-color: var(bg4);
+    background-color: inherit;
+    text-color: inherit;
+}
+
+mode-switcher {
+    enabled: true;
+    background-color: transparent;
+    text-color: var(foreground);
+}
+
+button {
+    background-color: var(background);
+    text-color: inherit;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+button selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+listview {
+    enabled: true;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    border: 0;
+    reverse: false;
+    fixed-height: true;
+    background-color: transparent;
+    text-color: var(foreground);
+    cursor: pointer;
+}
+
+scrollbar {
+    handle-color: var(foreground);
+}
+
+message {
+    background-color: transparent;
+    border: 0;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: var(foreground);
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+error-message {
+    background-color: var(background);
+    text-color: var(foreground);
+}
+
+element {
+    orientation: horizontal;
+    children: [ element-icon, element-text ];
+    background-color: transparent;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+element-icon {
+    size: 28px;
+    background-color: transparent;
+    border-radius: 6px;
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0;
+    background-color: transparent;
+}
+
+element normal.normal,
+element alternate.normal,
+element normal.active,
+element alternate.active,
+element normal.urgent,
+element alternate.urgent {
+    background-color: transparent;
+    text-color: var(foreground);
+}
+
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    background-color: var(bg3);
+    text-color: var(foreground);
+}
+
+num-filtered-rows {
+    expand: false;
+    text-color: var(foreground);
+}
+
+num-rows {
+    expand: false;
+    text-color: var(foreground);
+}
+
+textbox-num-sep {
+    expand: false;
+    str: "/";
+    text-color: var(foreground);
+}

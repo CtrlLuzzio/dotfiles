@@ -1,0 +1,135 @@
+@import "../colors"
+
+configuration {
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+}
+
+* {
+    background:                 var(bg0);
+    foreground:                 var(fg);
+    background-color:           transparent;
+}
+
+window {
+    transparency:               "real";
+    location:                   center;
+    anchor:                     center;
+    fullscreen:                 false;
+    width:                      800px;
+    x-offset:                   0px;
+    y-offset:                   0px;
+    enabled:                    true;
+    border:                     2px;
+    border-color:               var(accent);
+    border-radius:              10px;
+    cursor:                     "default";
+    background-color:           var(background);
+}
+
+mainbox {
+    enabled:                    true;
+    spacing:                    20px;
+    padding:                    10px;
+    background-color:           transparent;
+    orientation:                vertical;
+    children:                   [ "listbox" ];
+}
+
+listbox {
+    spacing:                    20px;
+    background-color:           transparent;
+    orientation:                vertical;
+    children:                   [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:                    true;
+    spacing:                    10px;
+    padding:                    10px;
+    background-color:           transparent;
+    text-color:                 var(foreground);
+    children:                   [ "entry", "num-filtered-rows", "textbox-num-sep", "num-rows" ];
+}
+
+entry {
+    enabled:                    true;
+    background-color:           inherit;
+    text-color:                 inherit;
+    cursor:                     text;
+    placeholder:                "Buscar fondo...";
+    placeholder-color:          var(bg4);
+}
+
+num-filtered-rows {
+    expand:                     false;
+    text-color:                 var(foreground);
+}
+
+textbox-num-sep {
+    expand:                     false;
+    str:                        "/";
+    text-color:                 var(foreground);
+}
+
+num-rows {
+    expand:                     false;
+    text-color:                 var(foreground);
+}
+
+listview {
+    enabled:                    true;
+    lines:                      2;
+    columns:                    4;
+    cycle:                      true;
+    dynamic:                    true;
+    layout:                     vertical;
+    reverse:                    false;
+    fixed-columns:              true;
+    fixed-height:               true;
+    border:                     0px;
+    scrollbar:                  false;
+
+    spacing:                    15px;
+    background-color:           transparent;
+    text-color:                 var(foreground);
+    cursor:                     "default";
+}
+
+element {
+    enabled:                    true;
+    spacing:                    10px;
+    padding:                    8px;
+    border-radius:              8px;
+    background-color:           transparent;
+    text-color:                 var(foreground);
+    orientation:                vertical;
+    cursor:                     pointer;
+    border:                     0px;
+}
+
+element normal.normal, element alternate.normal {
+    background-color:           transparent;
+    text-color:                 var(foreground);
+}
+
+element selected.normal, element selected.active, element selected.urgent {
+    background-color:           var(bg3);
+    text-color:                 var(foreground);
+}
+
+element-icon {
+    background-color:           transparent;
+    text-color:                 inherit;
+    size:                       128px;
+    border-radius:              6px;
+    cursor:                     inherit;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.5;
+}

@@ -1,0 +1,9 @@
+{
+  "include": ["./shared.jsonc"],
+  "modules-left": ["hyprland/workspaces"],
+
+  "hyprland/workspaces": {
+    "format": "{}",
+    "on-click": "activate"
+  }
+}
