@@ -7,7 +7,7 @@ for i in {1..15}; do
     sleep 2
 done
 
-TEXT=$(curl -fGsS -H "Accept-Language: ${LANG%_*}" "wttr.in/Cabudare?format=%c+%t")
+TEXT=$(curl -fGsS -H "Accept-Language: ${LANG%_*}" "wttr.in/?format=%c+%t")
 
 WTTR_PARAMS="T"
 
@@ -22,7 +22,7 @@ for _token in $( locale LC_MEASUREMENT ); do
   esac
 done 2> /dev/null
 
-TOOLTIP=$(curl -fGsS -H "Accept-Language: ${LANG%_*}" "wttr.in/Cabudare?${WTTR_PARAMS}")
+TOOLTIP=$(curl -fGsS -H "Accept-Language: ${LANG%_*}" "wttr.in/?${WTTR_PARAMS}")
 
 ESCAPED_TOOLTIP="${TOOLTIP//\\/\\\\}"
 ESCAPED_TOOLTIP="${ESCAPED_TOOLTIP//\"/\\\"}"
