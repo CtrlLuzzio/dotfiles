@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+for i in {1..15}; do
+    if ping -c 1 -W 1 wttr.in >/dev/null 2>&1; then
+	break
+    fi
+    sleep 2
+done
+
 TEXT=$(curl -fGsS -H "Accept-Language: ${LANG%_*}" "wttr.in/Cabudare?format=%c+%t")
 
 WTTR_PARAMS="T"

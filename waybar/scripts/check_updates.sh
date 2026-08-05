@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+for i in {1..15}; do
+    if ping -c 1 -W 1.1.1.1 >/dev/null 2>&1; then
+	break
+    fi
+    sleep 2
+done
+
 TOOLTIP_EXTRA=""
 TOTAL=0
 DISTRO_ICON=""
