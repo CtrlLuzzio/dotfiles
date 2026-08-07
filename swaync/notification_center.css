@@ -25,7 +25,7 @@
 }
 
 .widget-dnd {
-  background: var(--bg-dark);
+  background: var(--bg0);
   font-size: large;
   color: var(--fg);
 }
