@@ -1,0 +1,10 @@
+
+{
+  "include": ["./shared.jsonc"],
+  "modules-left": ["sway/workspaces"],
+
+  "sway/workspaces": {
+    "format": "{}",
+    "on-click": "activate"
+  }
+}

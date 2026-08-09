@@ -1,0 +1,227 @@
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+set $alt Mod1
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+set $term foot
+set $browser zen-browser
+set $fileManager thunar
+set $menu rofi -show drun
+
+### Output configuration
+    output HDMI-A-1 resolution 1920x1080@74.97Hz position 0,0 scale 1
+
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Idle configuration
+#
+
+### Input configuration
+
+input type:keyboard {
+    xkb_layout us
+    xkb_variant altgr-intl
+}
+
+input type:pointer {
+    # pointer_accel 0
+}
+
+### Key bindings
+# ==========================================
+# APPS & MENUS
+# ==========================================
+    bindsym $mod+Return exec $term
+    bindsym $mod+q kill
+    bindsym $mod+d exec $menu
+    bindsym $mod+e exec $fileManager
+    bindsym $mod+b exec $browser
+    bindsym $mod+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
+# ==========================================
+# HERRAMIENTAS DEL SISTEMA Y SCRIPTS
+# ==========================================
+    bindsym $mod+r exec ~/.config/waybar/scripts/reboot.sh
+    bindsym $mod+t exec change-theme -m
+    bindsym $mod+g exec change-wallpaper -m
+    bindsym $mod+s exec bash -c 'wayfreeze & PID=$!; sleep 0.1; AREA=$(slurp); [ -z "$AREA" ] && { kill $PID; exit 1; }; sleep 0.15;exec 3< <(grim -g "$AREA" -); kill $PID; satty --filename - <&3; exec 3<&-'
+
+# Recargar configuración y Salir
+    bindsym $mod+Shift+r reload
+    bindsym $mod+m exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+# ==========================================
+# GESTIÓN DE VENTANAS Y LAYOUT
+# ==========================================
+# Foco (Moverse entre ventanas)
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Mover ventanas
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Modos de Layout y Pantalla Completa
+bindsym $alt+b splith
+bindsym $alt+v splitv
+bindsym $alt+s layout stacking
+bindsym $alt+w layout tabbed
+bindsym $alt+e layout toggle split
+bindsym $alt+f fullscreen toggle
+bindsym $alt+backslash floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+
+# Arrastrar y redimensionar con el ratón
+floating_modifier $mod normal
+
+# ==========================================
+# WORKSPACES
+# ==========================================
+    # Cambiar a un workspace
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+
+    # Mover ventana a un workspace
+    bindsym $alt+1 move container to workspace number 1
+    bindsym $alt+2 move container to workspace number 2
+    bindsym $alt+3 move container to workspace number 3
+    bindsym $alt+4 move container to workspace number 4
+    bindsym $alt+5 move container to workspace number 5
+    bindsym $alt+6 move container to workspace number 6
+    bindsym $alt+7 move container to workspace number 7
+    bindsym $alt+8 move container to workspace number 8
+    bindsym $alt+9 move container to workspace number 9
+    bindsym $alt+0 move container to workspace number 10
+
+    # Navegación relativa de workspaces
+    bindsym $mod+comma workspace prev
+    bindsym $mod+period workspace next
+    bindsym Control+comma move container to workspace prev
+    bindsym Control+period move container to workspace next
+
+    # Navegación con el ratón (Usando eventos de hardware de Wayland puro)
+    # Note: button4 is scroll up, button5 is scroll down in standard X11/Wayland mice.
+    bindsym $mod+button4 workspace prev
+    bindsym $mod+button5 workspace next
+# ==========================================
+# SCRATCHPAD
+# ==========================================
+    bindsym $alt+z scratchpad show
+    bindsym $alt+Shift+z move scratchpad
+
+# ==========================================
+# TECLAS MULTIMEDIA (Permitidas con pantalla bloqueada)
+# ==========================================
+    bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+    bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+    bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+    bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl -e4 -n2 set 5%+
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl -e4 -n2 set 5%-
+    bindsym --locked XF86AudioNext exec playerctl next
+    bindsym --locked XF86AudioPause exec playerctl play-pause
+    bindsym --locked XF86AudioPlay exec playerctl play-pause
+    bindsym --locked XF86AudioPrev exec playerctl previous
+# ==========================================
+# MODO RESIZE
+# ==========================================
+mode "resize" {
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $alt+r mode "resize"
+exec_always autotiling
+
+# ==========================================
+# AUTOSTART
+# ==========================================
+exec awww-daemon
+exec swaync
+exec waybar -c ~/.config/waybar/config-sway.jsonc
+exec steam
+exec discord
+exec ferdium
+exec kdeconnect-indicator
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+exec wl-clip-persist --clipboard regular --reconnect-tries 0
+exec blueman-applet
+exec nm-applet
+exec /usr/libexec/lxqt-policykit-agent
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY
+exec systemctl --user start sway-session.target
+
+# ==========================================
+# LOOK & FEEL
+# ==========================================
+
+gaps inner 5
+gaps outer 5
+smart_gaps off
+
+default_border pixel 2
+default_floating_border pixel 2
+
+corner_radius 10
+
+shadows enable
+shadow_blur_radius 4
+shadow_color #1a1a1aee
+
+blur enable
+blur_radius 3
+blur_passes 1
+
+animation_duration_ms 300
+
+# ==========================================
+# Window Colors (Catppuccin Mocha Palette as placeholder)
+# Format: class              border  bg      text    indicator  child_border
+# ==========================================
+client.focused               #cba6f7 #cba6f7 #1e1e2e #cba6f7    #cba6f7
+client.unfocused             #1e1e2e #1e1e2e #cdd6f4 #1e1e2e    #1e1e2e
+client.focused_inactive      #181825 #181825 #cdd6f4 #181825    #181825
+client.urgent                #f38ba8 #f38ba8 #1e1e2e #f38ba8    #f38ba8
+
+# ==========================================
+# REGLAS DE VENTANAS
+# ==========================================
+
+no_focus [class="^$" title="^$" shell="xwayland" floating]
+for_window [class="^Xdg-desktop-portal-gtk$"] border pixel 0, blur disable, shadows disable
+for_window [title="Street Fighter 6"] inhibit_idle visible
