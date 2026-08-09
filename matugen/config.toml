@@ -26,7 +26,7 @@ output_path = "~/.config/rofi/themes/material-you.rasi"
 [templates.mango]
 input_path = "~/.config/matugen/templates/mango"
 output_path = "~/.config/mango/modules/themes/material-you.conf"
-post_hook = "mangoctl reload"
+post_hook = "mmsg dispatch reload_config"
 
 [templates.zellij]
 input_path = "~/.config/matugen/templates/zellij"

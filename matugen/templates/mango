@@ -1,5 +1,5 @@
-rootcolor=0x{{colors.surface.default.hex_stripped}}ff
-bordercolor=0x{{colors.surface_variant.default.hex_stripped}}ff
+rootcolor=0x{{colors.surface.default.hex_stripped}}aa
+bordercolor=0x{{colors.surface_variant.default.hex_stripped}}ee
 focuscolor=0x{{colors.primary.default.hex_stripped}}ff
 urgentcolor=0x{{colors.error.default.hex_stripped}}ff
 dropcolor=0x{{colors.primary.default.hex_stripped}}55

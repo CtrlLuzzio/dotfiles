@@ -144,7 +144,7 @@ check_nvim_distro() {
     local NVIM_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
 
     if ! command -v nvim >/dev/null 2>&1; then
-        echo -e "${YELLOW}-> Neovim is not installing. Skipping...${NC}"
+        echo -e "${YELLOW}-> Neovim is not installed. Skipping...${NC}"
         return 1
     fi
 
@@ -313,7 +313,7 @@ if check_installed "hyprctl" "Hyprland"; then
     fi
 fi
 
-if check_installed "mangoctl" "MangoWM"; then
+if check_installed "mmsg" "MangoWM"; then
     if [ -f "$THEME_DIR/$THEME/.mango-colors" ] || [ -f "$THEME_DIR/$THEME/.mango-theme" ]; then
         MANGO_DIR="$CONF_DIR/mango/modules"
         MANGO_THEME_DIR="$MANGO_DIR/themes"
@@ -327,7 +327,7 @@ if check_installed "mangoctl" "MangoWM"; then
             cp "$THEME_DIR/$THEME/.mango-theme" "$MANGO_THEME_DIR/${THEME}.conf"
         fi
 
-        mangoctl reload > /dev/null 2>&1
+        mmsg dispatch reload_config > /dev/null 2>&1
         echo -e "${CYAN}-> Updated MangoWM${NC}"
     else
         echo -e "${YELLOW}-> Missing MangoWM files in theme. Skipping...${NC}"
@@ -355,7 +355,7 @@ if check_installed "waybar" "Waybar"; then
 fi
 
 if check_installed "swaync-client" "SwayNC"; then
-    if [ -f "$THEME_DIR/$THEME/.import-css" ] || [ -f "$THEME_DIR/$THEME/.gtk-css" ]; then
+    if [ -f "$THEME_DIR/$THEME/.import-css" ] || [ -f "$THEME_DIR/$THEME/.css" ]; then
         SWAYNC_DIR="$CONF_DIR/swaync"
         SWAYNC_THEME_DIR="$SWAYNC_DIR/themes"
         mkdir -p "$SWAYNC_THEME_DIR"
