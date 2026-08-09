@@ -1,0 +1,14 @@
+os
+kernel
+display
+wm
+terminal
+cpu
+gpu
+memory
+swap
+disk
+locale
+colors
+
+separator=─
