@@ -1,8 +1,8 @@
 rootcolor=0x1e1e2eff
-bordercolor=0x45475aff
+bordercolor=0x1e1e2eaa
 dropcolor=0x74c7ec55
 splitcolor=0xfab387ff
-focuscolor=0xcba6f7ff
+focuscolor=0xcba6f7ee
 maximizescreencolor=0xa6e3a1ff
 urgentcolor=0xf38ba8ff
 scratchpadcolor=0x89b4faff
