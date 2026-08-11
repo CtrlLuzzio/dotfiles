@@ -50,7 +50,7 @@ if command -v zypper &> /dev/null; then
     fi
 elif command -v dnf &> /dev/null; then
     ICON=${DISTRO_ICON:-""}
-    DNF=$(dnf check-update -q | grep -v '^$' | wc -l)
+    DNF=$(dnf check-update -q | awk '/\.[^ ]+ +[^ ]+ +[^ ]+/ {print}' | wc -l)
     if [ "$DNF" -gt 0 ]; then
         TOTAL=$((TOTAL + DNF))
         TOOLTIP_EXTRA+="$ICON DNF: $DNF\n"
