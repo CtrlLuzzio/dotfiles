@@ -212,7 +212,7 @@ if check_installed "foot" "Foot Terminal"; then
         fi
 
         if [ -f "$FOOT_CONFIG" ]; then
-            if ! grep -q "include=$FOOT_DIR/colors.ini" "$FOOT_CONFIG"; then
+            if ! grep -Eq "^include=.*colors\.ini$" "$FOOT_CONFIG"; then
                 echo "include=$FOOT_DIR/colors.ini" >> "$FOOT_CONFIG"
             fi
         else
@@ -399,7 +399,7 @@ if [ "$THEME" = "material-you" ]; then
         if [ -f "$CACHE_DIR/.current_wallpaper" ]; then
             CURRENT_WP=$(cat "$CACHE_DIR/.current_wallpaper")
             echo -e "${CYAN}-> Applying colors from current wallpaper...${NC}"
-            matugen image "$CURRENT_WP" -b wal --source-color-index 0 > /dev/null 2>&1
+            matugen image "$CURRENT_WP" > /dev/null 2>&1
         else
             echo -e "${YELLOW}-> No current wallpaper found. Please set a wallpaper first with the change_wallpaper script.${NC}"
         fi
