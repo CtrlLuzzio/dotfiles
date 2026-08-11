@@ -154,7 +154,7 @@ echo "$WALLPAPER" > "$CACHE_DIR/.current_wallpaper"
 if [ "$CURRENT_THEME" = "material-you" ]; then
     if command -v matugen >/dev/null 2>&1; then
         echo -e "${CYAN}-> Generating colors..${NC}"
-        matugen image "$WALLPAPER" -b wal --source-color-index 0 > /dev/null 2>&1
+        matugen image "$WALLPAPER" > /dev/null 2>&1
     else
         echo -e "${YELLOW}-> matugen is not installed. Skipping...${NC}"
     fi
