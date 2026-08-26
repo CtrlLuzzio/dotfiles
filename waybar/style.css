@@ -14,7 +14,7 @@ window#waybar{
 }
 
 window#waybar > box {
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     background-color: @bg0;
 }
 

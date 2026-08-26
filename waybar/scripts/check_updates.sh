@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 for i in {1..15}; do
-    if ping -c 1 -W 1.1.1.1 >/dev/null 2>&1; then
-	break
+    if ping -c 1 -W 2 1.1.1.1 >/dev/null 2>&1; then
+        break
     fi
     sleep 2
 done
@@ -43,7 +43,7 @@ fi
 
 if command -v zypper &> /dev/null; then
     ICON=${DISTRO_ICON:-""}
-    ZYPPER=$(zypper -q -x lu | grep -c '<update ')
+    ZYPPER=$(zypper --no-refresh -q -x lu 2>/dev/null | grep -o '<update ' | wc -l)
     if [ "$ZYPPER" -gt 0 ]; then
         TOTAL=$((TOTAL + ZYPPER))
         TOOLTIP_EXTRA+="$ICON Zypper: $ZYPPER\n"
