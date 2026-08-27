@@ -87,6 +87,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
+source <(fzf --zsh)
 
 # User configuration
 
