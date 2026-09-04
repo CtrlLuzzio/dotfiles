@@ -2,7 +2,7 @@
 local terminal = "foot"
 local fileManager = "thunar"
 local menu = "rofi -show drun"
-local browser = "zen-browser" --Zen Browser binary name in Arch
+local browser = "zen-browser"
 local mainMod = "SUPER"
 local secondaryMod = "ALT"
 
