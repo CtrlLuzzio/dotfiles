@@ -157,6 +157,22 @@ check_nvim_distro() {
     return 1
 }
 
+if [ "$THEME" = "material-you" ]; then
+    if check_installed "matugen" "Matugen"; then
+        if [ -f "$CACHE_DIR/.current_wallpaper" ]; then
+            CURRENT_WP=$(cat "$CACHE_DIR/.current_wallpaper")
+            echo -e "${CYAN}-> Applying colors from current wallpaper...${NC}"
+            matugen image "$CURRENT_WP" --source-color-index 0 > /dev/null 2>&1
+        else
+            echo -e "${YELLOW}-> No current wallpaper found. Please set a wallpaper first with the change_wallpaper script.${NC}"
+        fi
+    else
+        echo -e "${YELLOW}-> matugen is not installed. Skipping...${NC}"
+        notify-send "Error" "Matugen is not installed. Skipping..."
+        exit
+    fi
+fi
+
 echo -e "${GREEN}Applying theme: $THEME${NC}\n"
 
 if check_installed "zellij" "Zellij"; then
@@ -392,19 +408,6 @@ if check_installed "rofi" "Rofi"; then
         echo -e "${CYAN}-> Updated Rofi${NC}"
     else
         echo -e "${YELLOW}-> Missing Rofi files in theme. Skipping...${NC}"
-    fi
-fi
-if [ "$THEME" = "material-you" ]; then
-    if check_installed "matugen" "Matugen"; then
-        if [ -f "$CACHE_DIR/.current_wallpaper" ]; then
-            CURRENT_WP=$(cat "$CACHE_DIR/.current_wallpaper")
-            echo -e "${CYAN}-> Applying colors from current wallpaper...${NC}"
-            matugen image "$CURRENT_WP" > /dev/null 2>&1
-        else
-            echo -e "${YELLOW}-> No current wallpaper found. Please set a wallpaper first with the change_wallpaper script.${NC}"
-        fi
-    else
-        echo -e "${YELLOW}-> matugen is not installed. Skipping...${NC}"
     fi
 fi
 echo -e "${GREEN}Done!${NC}"
