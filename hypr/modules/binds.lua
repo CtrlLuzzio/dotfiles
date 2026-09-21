@@ -5,6 +5,7 @@ local menu = "rofi -show drun"
 local browser = "zen-browser"
 local mainMod = "SUPER"
 local secondaryMod = "ALT"
+local smw = require("plugins.split-monitor-workspaces")
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -34,10 +35,14 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.swap({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.swap({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.swap({ direction = "down" }))
 
+hl.bind(mainMod .. " +  SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
+hl.bind(mainMod .. "+ N", hl.dsp.exec_cmd("python3 ~/.config/hypr/scripts/toggle-layout.py"))
+
 for i = 1, 10 do
     local key = i % 10
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(secondaryMod .. " + " .. key,     hl.dsp.window.move({ workspace = i }))
+    local n = tostring(i)
+    hl.bind(mainMod .. " + " .. key, smw.workspace(n))
+    hl.bind(secondaryMod .. " + " .. key, smw.move_to_workspace(n))
 end
 
 hl.bind(mainMod .. " + comma",  hl.dsp.focus({ workspace = "e-1" }))
