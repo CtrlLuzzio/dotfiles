@@ -9,7 +9,7 @@
 .notification {
   background: var(--bg0);
   border: 2px solid var(--accent);
-  margin: 4px -2px 0 0;
+  margin: -2px -8px 0 0;
 }
 
 .close-button {
@@ -22,7 +22,6 @@
   min-width: 18px;
   min-height: 18px;
   font-size: 10px;
-  border-radius: 5px;
 }
 
 .close-button:hover {

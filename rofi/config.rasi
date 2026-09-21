@@ -51,7 +51,6 @@ window {
     enabled: true;
     border: 2px;
     border-color: var(accent);
-    border-radius: 10px;
 }
 
 mainbox {
@@ -96,7 +95,6 @@ button {
     text-color: inherit;
     cursor: pointer;
     padding: 3px;
-    border-radius: 8px;
 }
 
 button selected {
@@ -143,13 +141,11 @@ element {
     children: [ element-icon, element-text ];
     background-color: transparent;
     padding: 2px;
-    border-radius: 8px;
 }
 
 element-icon {
     size: 28px;
     background-color: transparent;
-    border-radius: 6px;
 }
 
 element-text {
