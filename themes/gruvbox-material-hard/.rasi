@@ -1,0 +1,11 @@
+* {
+  bg0: #282828dd; // bg1 / bg2
+  bg1: #3C3836dd; // bg3 / bg4
+  bg2: #504945; // bg5
+  bg3: #7C6F64;   // grey0
+  bg4: #928374;   // grey1
+  fg: #DDC7A1; // fg1
+  accent: #E78A4E; // orange
+  red:    #EA6962; // red
+  blue:   #7DAEA3; // blue
+}

@@ -1,0 +1,69 @@
+[colors-dark]
+cursor=1d2021 d4be98
+foreground=d4be98
+background=1d2021
+
+regular0=282828  # black (bg1)
+regular1=ea6962  # red
+regular2=a9b665  # green
+regular3=d8a657  # yellow
+regular4=7daea3  # blue
+regular5=d3869b  # magenta (purple)
+regular6=89b482  # cyan (aqua)
+regular7=d4be98  # white (fg0)
+
+bright0=928374   # bright black (grey1)
+bright1=ea6962   # bright red
+bright2=a9b665   # bright green
+bright3=d8a657   # bright yellow
+bright4=7daea3   # bright blue
+bright5=d3869b   # bright magenta
+bright6=89b482   # bright cyan
+bright7=ddc7a1   # bright white (fg1)
+
+16=e78a4e        # orange
+17=ea6962        # bg_red
+
+selection-foreground=d4be98
+selection-background=3c3836
+
+search-box-no-match=1d2021 ea6962
+search-box-match=d4be98 3c3836
+
+jump-labels=1d2021 e78a4e
+urls=7daea3
+
+[colors-light]
+cursor=f9f5d7 654735
+foreground=654735
+background=f9f5d7
+
+regular0=7c6f64  # black (grey2)
+regular1=c14a4a  # red
+regular2=6c782e  # green
+regular3=b47109  # yellow
+regular4=45707a  # blue
+regular5=945e80  # magenta (purple)
+regular6=4c7a5d  # cyan (aqua)
+regular7=654735  # white (fg0)
+
+bright0=928374   # bright black (grey1)
+bright1=c14a4a   # bright red
+bright2=6c782e   # bright green
+bright3=b47109   # bright yellow
+bright4=45707a   # bright blue
+bright5=945e80   # bright magenta
+bright6=4c7a5d   # bright cyan
+bright7=4f3829   # bright white (fg1)
+
+16=c35e0a        # orange
+17=ae5858        # bg_red
+
+selection-foreground=654735
+selection-background=f2e5bc
+
+search-box-no-match=f9f5d7 c14a4a
+search-box-match=654735 f2e5bc
+
+jump-labels=f9f5d7 c35e0a
+urls=45707a

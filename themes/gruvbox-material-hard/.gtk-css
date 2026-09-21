@@ -1,0 +1,18 @@
+@define-color bg-darker #141617; /* bg_dim */
+@define-color bg-dark #1D2021; /* bg0 */
+@define-color bg0 #282828; /* bg1 / bg2 */
+@define-color bg1 #3C3836; /* bg3 / bg4 */
+@define-color bg2 #504945; /* bg5 */
+@define-color grey0 #7C6F64; /* grey0 */
+@define-color grey1 #928374; /* grey1 */
+@define-color fg-disabled #A89984; /* grey2 */
+@define-color subtext1 #D4BE98; /* fg0 */
+@define-color fg #DDC7A1; /* fg1 */
+@define-color purple #D3869B; /* purple */
+@define-color red #EA6962; /* red */
+@define-color green #A9B665; /* green */
+@define-color blue #7DAEA3; /* blue */
+@define-color orange #E78A4E; /* orange */
+@define-color yellow #D8A657; /* yellow */
+@define-color teal #89B482; /* aqua */
+@define-color accent @orange;
