@@ -1,0 +1,11 @@
+* {
+  bg0: #2e3440dd;
+  bg1: #3b4252dd;
+  bg2: #434c5e;
+  bg3: #4c566a;
+  bg4: #566279;
+  fg: #d8dee9;
+  accent: #81a1c1;
+  red: #bf616a;
+  blue: #81a1c1;
+}

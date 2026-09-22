@@ -1,22 +1,22 @@
 :root {
-  --bg-darker: #141617; /* bg_dim */
-  --bg-dark: #1D2021; /* bg0 */
-  --bg0: #282828; /* bg1 / bg2 */
-  --bg1: #3C3836; /* bg3 / bg4 */
-  --bg2: #504945; /* bg5 */
-  --grey0: #7C6F64; /* grey0 */
-  --grey1: #928374; /* grey1 */
-  --fg-disabled: #A89984; /* grey2 */
-  --fg: #DDC7A1; /* fg1 */
-  --subtext1: #D4BE98; /* fg0 */
-  
-  --purple: #D3869B; /* purple */
-  --red: #EA6962; /* red */
-  --green: #A9B665; /* green */
-  --blue: #7DAEA3; /* blue */
-  --orange: #E78A4E; /* orange */
-  --yellow: #D8A657; /* yellow */
-  --teal: #89B482; /* aqua */
-  
-  --accent: var(--orange);
+--bg-darker: #141617;   /* bg_dim */
+--bg-dark: #1D2021;     /* bg0 */
+--bg0: #282828;         /* bg1 */
+--bg1: #32302F;         /* bg_statusline2 */
+--bg2: #3C3836;         /* bg3 */
+--bg3: #504945;         /* bg5 */
+--bg4: #665C54;         /* calculated */
+--fg-disabled: #A89984; /* grey2 */
+--fg: #D4BE98;          /* fg0 */
+--purple: #D3869B;      /* purple */
+--pink: #E396A4;        /* calculated */
+--red: #EA6962;         /* red */
+--maroon: #C14A4A;      /* calculated */
+--green: #A9B665;       /* green */
+--teal: #89B482;        /* aqua */
+--sky: #8FBDB6;         /* calculated */
+--blue: #7DAEA3;        /* blue */
+--orange: #E78A4E;      /* orange */
+--yellow: #D8A657;      /* yellow */
+--accent: var(--orange);
 }

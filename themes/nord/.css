@@ -1,0 +1,22 @@
+:root {
+--bg-darker: #1c2027;   /* calculated */
+--bg-dark: #252a33;     /* calculated */
+--bg0: #2e3440;         /* nord0 */
+--bg1: #3b4252;         /* nord1 */
+--bg2: #434c5e;         /* nord2 */
+--bg3: #4c566a;         /* nord3 */
+--bg4: #566279;         /* calculated */
+--fg-disabled: #7e8a9f; /* calculated */
+--fg: #d8dee9;          /* nord4 */
+--purple: #b48ead;      /* nord15 */
+--pink: #c97c85;        /* calculated */
+--red: #bf616a;         /* nord11 */
+--maroon: #8c454d;      /* calculated */
+--green: #a3be8c;       /* nord14 */
+--teal: #8fbcbb;        /* nord7 */
+--sky: #88c0d0;         /* nord8 */
+--blue: #81a1c1;        /* nord9 */
+--orange: #d08770;      /* nord12 */
+--yellow: #ebcb8b;      /* nord13 */
+--accent: var(--blue);
+}
