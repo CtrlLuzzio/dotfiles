@@ -1,10 +1,10 @@
 rootcolor=0x282828ff
 bordercolor=0x282828aa
-dropcolor=0x7DAEA355
+dropcolor=0x8FBDB655
 splitcolor=0xD3869Bff
 focuscolor=0xE78A4Eee
 maximizescreencolor=0xA9B665ff
 urgentcolor=0xEA6962ff
 scratchpadcolor=0x7DAEA3ff
-globalcolor=0xD3869Bff
+globalcolor=0xE396A4ff
 overlaycolor=0x89B482ff
