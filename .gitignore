@@ -6,3 +6,4 @@ colors.*
 ags/
 quickshell/
 hypr/plugins/*
+*/.vscode/
