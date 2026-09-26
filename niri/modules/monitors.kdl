@@ -1,0 +1,7 @@
+// https://niri-wm.github.io/niri/Configuration:-Outputs
+output "HDMI-A-1" {
+    mode "1920x1080@74.97"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}

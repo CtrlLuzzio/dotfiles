@@ -1,0 +1,24 @@
+// https://niri-wm.github.io/niri/Configuration:-Input
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            variant "altgr-intl"
+        }
+        numlock
+    }
+
+    touchpad {
+        off
+    }
+
+    mouse {
+    }
+
+    trackpoint {
+        off
+    }
+
+    warp-mouse-to-focus
+}

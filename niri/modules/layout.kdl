@@ -1,0 +1,37 @@
+// https://niri-wm.github.io/niri/Configuration:-Layout
+include "./themes/catppuccin-mocha.kdl"
+
+layout {
+   gaps 10
+
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.3
+        proportion 0.4
+        proportion 0.6
+    }
+
+    preset-window-heights { 
+        proportion 0.5
+        proportion 1.0
+    }
+
+    default-column-width { proportion 0.6; }
+
+    focus-ring {
+        off
+    }
+
+    border {
+        width 2
+    }
+
+    shadow {
+        on
+
+        softness 4
+        spread 0
+        offset x=0 y=2
+    }
+}
