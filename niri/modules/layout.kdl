@@ -2,6 +2,8 @@
 include "./themes/catppuccin-mocha.kdl"
 
 layout {
+   geometry-corner-radius 10
+   clip-to-geometry true
    gaps 10
 
     center-focused-column "never"
