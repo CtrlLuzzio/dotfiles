@@ -1,0 +1,16 @@
+// Don't know where to put this lol
+
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 22
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+clipboard {
+    disable-primary
+}
+
+screenshot-path "~/Imágenes/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
