@@ -15,4 +15,15 @@ clipboard {
 
 screenshot-path "~/Imágenes/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+
+blur {
+    passes 2
+    offset 3.0
+    noise 0.03
+    saturation 1.0
+}
+
 prefer-no-csd
