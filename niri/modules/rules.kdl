@@ -6,3 +6,8 @@ window-rule {
     focus-ring { off; }
     shadow { off; }
 }
+
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
