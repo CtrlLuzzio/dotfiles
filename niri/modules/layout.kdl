@@ -1,5 +1,4 @@
 // https://niri-wm.github.io/niri/Configuration:-Layout
-include "./themes/catppuccin-mocha.kdl"
 
 layout {
    gaps 10
