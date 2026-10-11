@@ -6,4 +6,5 @@ colors.*
 ags/
 quickshell/
 hypr/plugins/*
+*hyprtoolkit*
 */.vscode/

@@ -9,3 +9,7 @@ require("modules.misc")
 require("modules.binds")
 require("modules.rules")
 require("modules.plugins")
+
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()
