@@ -2,7 +2,7 @@
 include "./themes/catppuccin-mocha.kdl"
 
 layout {
-   gaps 10
+   gaps 5
 
     center-focused-column "never"
 
@@ -22,15 +22,17 @@ layout {
     struts {
         right 5
         left 5
-        top 0
-        bottom 0
+        top 5
+        bottom 5
     }
 
     focus-ring {
+	off
         width 2
     }
 
     border {
+	on
         width 2
     }
 
