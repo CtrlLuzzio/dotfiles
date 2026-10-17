@@ -1,4 +1,5 @@
 *noctalia*
+!noctalia/
 *.luarc.json*
 *material-you.*
 colors.*
