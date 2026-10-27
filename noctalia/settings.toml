@@ -1,4 +1,4 @@
-config_version = 14
+config_version = 15
 
 [bar.default]
 end = [
@@ -28,15 +28,17 @@ widget_spacing = 8
 active_monitor_only = true
 background_opacity = 0.84999998100101948
 cross_axis_padding = 5
-enabled = true
+enabled = false
 icon_size = 40
 main_axis_padding = 10
 margin_edge = 10
-monitors = [ "HDMI-A-1" ]
 radius = 10
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
+
+    [dock.monitor.HDMI-A-1]
+    enabled = true
 
 [location]
 address = "Cabudare"
@@ -105,7 +107,7 @@ source = "community"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "hyprland", "kcolorscheme", "mango", "niri", "qt" ]
+    builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "hyprland", "kcolorscheme", "mango", "niri", "qt", "umbriel" ]
     community_ids = [ "pywalfox", "zen-browser", "libreoffice", "vscode", "zellij", "hyprtoolkit", "bat", "fzf", "lazygit" ]
 
 [wallpaper]
