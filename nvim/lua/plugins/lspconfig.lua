@@ -51,6 +51,7 @@ return {
         vim.lsp.enable("ts_ls")
         vim.lsp.enable("ruff")
         vim.lsp.enable("ty")
+	vim.lsp.enable("qmlls")
 	vim.lsp.enable("nil_ls")
 	vim.lsp.enable("nixfmt")
 	vim.lsp.enable("nixpkgs_fmt")
